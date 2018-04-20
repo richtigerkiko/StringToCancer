@@ -2,17 +2,17 @@
 
 let StringToCancer notCancerYet =
     let mutable cancerString = ""
-    let mutable i = 0
+    let mutable i = ref 0
     for c in notCancerYet do
         match Char.IsWhiteSpace(c) with
             | true ->
-                i <- i + 1
+                incr i
                 cancerString <- cancerString + c.ToString()
             | false ->
-                match i % 2 with
+                match i.Value % 2 with
                     | 0 -> cancerString <- cancerString + c.ToString().ToUpper()
                     | 1 -> cancerString <- cancerString + c.ToString().ToLower()
-        i <- i + 1
+        incr i
     cancerString
 
 [<EntryPoint>]
