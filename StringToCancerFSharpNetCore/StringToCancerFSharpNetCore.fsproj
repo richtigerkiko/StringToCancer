@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="StringToCancerFunc.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
