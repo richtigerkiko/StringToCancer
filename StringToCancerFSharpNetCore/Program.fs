@@ -18,11 +18,6 @@ let StringToCancer notCancerYet =
         i <- i + 1
     cancerString
 
-module Seq =
-    let infiniteRepeat items =
-        seq { while true do yield! items }
-
-
 [<EntryPoint>]
 let main argv =
 
