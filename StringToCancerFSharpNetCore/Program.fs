@@ -18,8 +18,7 @@ let StringToCancer notCancerYet =
 [<EntryPoint>]
 let main argv =
     printfn "Insert uncancerous string:"
-    let str = StringToCancer(Console.ReadLine())
-    printfn "%s" str
+    Console.ReadLine() |> StringToCancer |> printfn "%s" 
     printfn "Press <ENTER> to close"
     System.Console.ReadLine() |> ignore
     0 
