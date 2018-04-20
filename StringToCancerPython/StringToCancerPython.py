@@ -1,15 +1,4 @@
-def StringToCancer( notCancerYet ):
-    i = 0
-    cancerString = ""
-    for c in notCancerYet :
-        if c == " " :
-            i+=1
-        if i % 2 == 0 :
-            cancerString = cancerString + c.upper()
-        else:
-            cancerString = cancerString + c.lower()
-        i+=1
-    return cancerString;
+import StringToCancerFunc
 
-print(StringToCancer(input("Insert uncancerous string: ")))
+print(StringToCancerFunc.create(input("Insert uncancerous string: ")))
 
