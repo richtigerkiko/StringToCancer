@@ -4,14 +4,9 @@ let StringToCancer notCancerYet =
     let mutable cancerString = ""
     let mutable i = ref 0
     for c in notCancerYet do
-        match Char.IsWhiteSpace(c) with
-            | true ->
-                incr i
-                cancerString <- cancerString + c.ToString()
-            | false ->
-                match i.Value % 2 with
-                    | 0 -> cancerString <- cancerString + c.ToString().ToUpper()
-                    | 1 -> cancerString <- cancerString + c.ToString().ToLower()
+        if Char.IsWhiteSpace(c) then incr i
+        if i.Value % 2 = 0 then cancerString <- cancerString + c.ToString().ToUpper()
+        else cancerString <- cancerString + c.ToString().ToLower()
         incr i
     cancerString
 
