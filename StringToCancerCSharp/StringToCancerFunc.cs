@@ -17,6 +17,7 @@ namespace StringToCancerCSharp
                 if (char.IsWhiteSpace(c)) i++;
                 if (i % 2 == 0) cancerString += c.ToString().ToUpper();
                 else cancerString += c.ToString().ToLower();
+                i++;
             }
             return cancerString;
         }
